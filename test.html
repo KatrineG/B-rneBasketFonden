@@ -1,0 +1,95 @@
+<html>
+
+<head>
+    <style>
+        body{
+            font-family: 'Comic Sans MS';
+        }
+        .header {
+            background-color: aqua;
+            width: 100%;
+            height:80px;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            justify-content: space-between;
+        }
+        #simple-slider {
+            width: 1000px;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        .align-right {
+        }
+
+        .slide {
+            display: flex;
+            align-items: center;
+        }
+
+        .text {
+            margin-left: 25px;
+        }
+
+        .maps {
+            display: flex;
+            align-items: center;
+        }
+        .button {
+            background-color: red;
+            color: white;
+            padding: 20px;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="align-left">
+            <p>Børnebasketfonden</p>
+        </div>
+        <div class="align-right">
+            <span class="button">test</span>
+            <span>test</span>
+        </div>
+    </div>
+
+    <div id="simple-slider" data-simple-slider>
+        <div class="slide">
+            <img class="image" src="https://picsum.photos/612/500?random=1" />
+            <div class="text">Mark Twain bla bla bla</div>
+        </div>
+        <div class="slide">
+            <img class="image" src="https://picsum.photos/612/500?random=2" />
+            <div class="text">test</div>
+        </div>
+    </div>
+
+    <div class="maps">
+        <div style="height:420px; border:2px solid #eee; display:inline-block; overflow:hidden;">
+            <iframe src="https://www.google.com/maps/d/embed?mid=1oKMtK7qz22wY0rpG0s5ZcjlkYl64bWI&ehbc=2E312F&noprof=1"
+                width="610" height="480" style="position:relative; top:-60px; border:none;"></iframe>
+        </div>
+        <p>test</p>
+    </div>
+    <!--https://github.com/ruyadorno/simple-slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.js"></script>
+    <script>
+        simpleslider.getSlider({
+            container: document.getElementById('simple-slider'),
+            prop: 'left',
+            init: 1000,
+            show: 0,
+            end: -1000,
+            unit: 'px',
+            delay: 5,
+            duration: 1
+        });
+        
+    </script>
+</body>
+
+</html>
